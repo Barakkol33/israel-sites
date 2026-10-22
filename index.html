@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>מצב המדינה</title>
+    <meta name="description" content="דשבורד על מדינת ישראל: מדדים רשמיים ב־11 תחומים, לאורך זמן, עם ממשלות, אירועים ורפורמות." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;800&display=swap" rel="stylesheet" />
+    <script type="module" crossorigin src="/israel-sites/assets/index-B1TcERf0.js"></script>
+    <link rel="stylesheet" crossorigin href="/israel-sites/assets/index-w3o_BInA.css">
+  </head>
+  <body>
+    <div class="prototype-bar" role="note">
+      <strong>אב־טיפוס.</strong> האתר בפיתוח וייתכנו בו טעויות. כל נתון מקושר למקור שלו — כדאי לבדוק שם.
+    </div>
+
+    <header class="site-header">
+      <div class="wrap header-inner">
+        <a class="brand" href="#">
+          <span class="brand-mark" aria-hidden="true"></span>
+          מצב המדינה
+        </a>
+        <nav class="areas" aria-label="אזורי האתר">
+          <a class="area active" href="#" aria-current="page">מדדים</a>
+          <span class="area soon" title="בקרוב">כנסת</span>
+          <span class="area soon" title="בקרוב">הצעות</span>
+          <span class="area soon" title="בקרוב">שיח</span>
+        </nav>
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="החלפת מצב תצוגה">◐</button>
+      </div>
+      <div class="toolbar">
+        <div class="wrap toolbar-inner">
+          <div class="tool-group">
+            <span class="tool-label">תקופה</span>
+            <select id="range-from" aria-label="שנת התחלה"></select>
+            <span aria-hidden="true">–</span>
+            <select id="range-to" aria-label="שנת סיום"></select>
+            <span class="presets" id="presets">
+              <button type="button" class="chip" data-preset="10">עשור</button>
+              <button type="button" class="chip" data-preset="5">5 שנים</button>
+              <button type="button" class="chip" data-preset="all">הכול</button>
+            </span>
+            <select id="gov-preset" aria-label="מכניסת ממשלה"></select>
+          </div>
+          <div class="tool-group legend" id="overlay-toggles">
+            <span class="legend-item"><i class="sw sw-main"></i>ישראל</span>
+            <button type="button" class="chip" data-overlay="oecd"><i class="sw sw-oecd"></i>ממוצע OECD</button>
+            <button type="button" class="chip" data-overlay="governments"><i class="sw sw-gov"></i>ממשלות</button>
+            <button type="button" class="chip" data-overlay="events"><i class="sw sw-event"></i>אירועים</button>
+            <button type="button" class="chip" data-overlay="reforms"><i class="sw sw-reform"></i>רפורמות</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="wrap">
+          <p class="eyebrow">מצב המדינה במספרים</p>
+          <h1>האם טוב לחיות בישראל?</h1>
+          <p class="lede">
+            <span id="hero-count"></span> מדדים רשמיים של הלמ"ס, הבנק העולמי ודוח האושר העולמי, ב־11 תחומי חיים. בכל מדד
+            בודקים אם המצב השתפר או הורע בין <b id="range-label"></b>. את התקופה אפשר לשנות בסרגל למעלה.
+          </p>
+          <div class="verdict" id="verdict"></div>
+          <div class="kpis" id="kpis"></div>
+        </div>
+      </section>
+
+      <section class="wrap block">
+        <h2 class="section-title">לפי תחום</h2>
+        <p class="section-sub">כמה מהמדדים בכל תחום השתפרו, נשארו יציבים או הורעו. לחיצה על תחום מובילה לגרפים שלו.</p>
+        <div class="scoreboard" id="scoreboard"></div>
+      </section>
+
+      <section class="wrap block highlights" id="highlights"></section>
+
+      <div id="domains"></div>
+
+      <section class="wrap block" id="reforms">
+        <h2 class="section-title">מאגר הרפורמות</h2>
+        <p class="section-sub">
+          רפורמות ופרויקטים מרכזיים. כל אחד מסומן בקו מקווקו סגול על הגרפים של המדדים הקשורים אליו. מתאם בזמן אינו בהכרח השפעה.
+        </p>
+        <div class="reform-list" id="reform-list"></div>
+      </section>
+
+      <section class="wrap block method" id="method">
+        <h2 class="section-title">איך זה מחושב</h2>
+        <ul>
+          <li>בכל מדד משווים את הערך האחרון בתקופה שנבחרה לערך הראשון בה. ברירת המחדל היא העשור האחרון.</li>
+          <li>
+            לכל מדד הוגדר כיוון רצוי, למשל ירידה ברצח או עלייה בתוחלת החיים. שינוי קטן מ־1 נקודת אחוז (במדדים באחוזים) או מ־3%
+            (בשאר המדדים) נחשב "יציב".
+          </li>
+          <li>
+            הבחירה של המדדים היא שלנו, אבל המדדים עצמם רשמיים. רובם מתוך מערכת מדדי איכות החיים של הלמ"ס, שנבנתה בליווי OECD.
+            בחירה אחרת של מדדים יכולה לתת תמונה אחרת.
+          </li>
+          <li>
+            ממשלות, אירועים ורפורמות מסומנים על הגרפים כדי לתת הקשר. <strong>מתאם בזמן אינו בהכרח השפעה</strong>: שינוי אחרי
+            אירוע או רפורמה לא אומר שהם גרמו לו.
+          </li>
+          <li>הנתונים נמשכו לאחרונה ב־<span id="generated"></span>.</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap">
+        מקורות: <a href="https://www.cbs.gov.il/" target="_blank" rel="noopener">הלשכה המרכזית לסטטיסטיקה</a> ·
+        <a href="https://data.worldbank.org/" target="_blank" rel="noopener">הבנק העולמי</a> ·
+        <a href="https://ourworldindata.org/" target="_blank" rel="noopener">Our World in Data</a> ·
+        <a href="https://worldhappiness.report/" target="_blank" rel="noopener">World Happiness Report</a>
+        <br />אב־טיפוס, פרויקט אישי. ייתכנו טעויות.
+      </div>
+    </footer>
+
+    <dialog class="detail" id="detail" aria-labelledby="detail-title">
+      <div class="detail-inner">
+        <button class="detail-close" id="detail-close" type="button" aria-label="סגירה">✕</button>
+        <p class="detail-domain" id="detail-domain"></p>
+        <h2 id="detail-title"></h2>
+        <p class="detail-desc" id="detail-desc"></p>
+        <div class="detail-stats" id="detail-stats"></div>
+        <div class="detail-controls" id="detail-controls"></div>
+        <div class="detail-chart" id="detail-chart"></div>
+        <p class="detail-note">ממשלות מסומנות ברקע, אירועים בקו מקווקו אדום ורפורמות בקו מקווקו סגול. מתאם בזמן אינו בהכרח השפעה.</p>
+        <div class="detail-reforms" id="detail-reforms"></div>
+        <p class="detail-source" id="detail-source"></p>
+      </div>
+    </dialog>
+
+  </body>
+</html>
