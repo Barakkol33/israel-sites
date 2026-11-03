@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>כנסת · מה קורה בישראל?</title>
+    <meta name="description" content="החוקים שעברו בכנסת ה־25, ומי הצביע איך." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;800&display=swap" rel="stylesheet" />
+    <script type="module" crossorigin src="/israel-sites/assets/knesset-Dzoy_1hR.js"></script>
+    <link rel="modulepreload" crossorigin href="/israel-sites/assets/features-DSEovFpp.js">
+    <link rel="stylesheet" crossorigin href="/israel-sites/assets/features-BGed7SyQ.css">
+  </head>
+  <body>
+    <div class="prototype-bar" role="note">
+      <strong>אב־טיפוס.</strong> הנתונים אמיתיים, מקבצי כנסת פתוחה, אבל עדיין ייתכנו בהם טעויות.
+    </div>
+
+    <header class="site-header">
+      <div class="wrap header-inner">
+        <a class="brand" href="./">
+          <span class="brand-mark" aria-hidden="true"></span>
+          מה קורה בישראל?
+        </a>
+        <nav class="areas" aria-label="אזורי האתר">
+          <a class="area" data-feature="avi" href="./journey.html">אבי</a>
+          <a class="area" href="./metrics.html">מדדים</a>
+          <a class="area active" data-feature="knesset" href="./knesset.html" aria-current="page">כנסת</a>
+          <a class="area" data-feature="archive" href="./archive.html">ארכיון</a>
+          <span class="area soon" title="בקרוב">הצעות</span>
+          <span class="area soon" title="בקרוב">שיח</span>
+        </nav>
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="החלפת מצב תצוגה">◐</button>
+      </div>
+      <div class="toolbar">
+        <div class="wrap toolbar-inner">
+          <div class="tool-group tabs" role="tablist">
+            <button type="button" class="chip" role="tab" data-tab="mks">חברי הכנסת</button>
+            <button type="button" class="chip" role="tab" data-tab="laws">חוקים</button>
+            <button type="button" class="chip" role="tab" data-tab="failed">הצעות שלא עברו</button>
+          </div>
+          <div class="tool-group">
+            <input type="search" id="search" class="search" placeholder="חיפוש…" aria-label="חיפוש" />
+            <select id="filter-party" aria-label="סינון לפי מפלגה"></select>
+            <select id="filter-kind" aria-label="סינון לפי סוג הצעה"></select>
+            <select id="filter-split" aria-label="סינון לפי תוצאת ההצבעה"></select>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero hero-small">
+        <div class="wrap">
+          <p class="eyebrow">הכנסת ה־25</p>
+          <h1>מה עבר בכנסת, ומי הצביע איך?</h1>
+          <p class="lede">
+            כל החוקים שעברו בכנסת ה־25 וכל ההצבעות עליהם, וגם ההצעות שנפלו או נעצרו בדרך. לכל חבר כנסת: איך הצביע בקריאה שלישית, ואילו חוקים יזם.
+          </p>
+          <div class="kpis" id="knesset-kpis"></div>
+        </div>
+      </section>
+
+      <section class="wrap block" id="view"></section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap footer-links"><a href="./about.html">על האתר: מקורות, כללים ובקשות תיקון</a></div>
+      <div class="wrap">
+        הנתונים מקבצי כנסת פתוחה (הסדנא לידע ציבורי), שמבוססים על נתוני הכנסת. הצבעה שאינה אלקטרונית או שמית לא מפורטת לפי חבר כנסת.
+        <br />אב־טיפוס, פרויקט אישי.
+      </div>
+    </footer>
+
+    <dialog class="detail" id="kdetail" aria-labelledby="kdetail-title">
+      <div class="detail-inner">
+        <button class="detail-close" id="kdetail-close" type="button" aria-label="סגירה">✕</button>
+        <div id="kdetail-body"></div>
+      </div>
+    </dialog>
+
+  </body>
+</html>

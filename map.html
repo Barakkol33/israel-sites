@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>מפת הטיעונים · מה קורה בישראל?</title>
+    <meta name="description" content="מפה לכל נושא באתר: אפשר לשוטט, להתקרב ולראות מה מוביל למה." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;800&display=swap" rel="stylesheet" />
+    <script type="module" crossorigin src="/israel-sites/assets/map-CaWD5lL9.js"></script>
+    <link rel="modulepreload" crossorigin href="/israel-sites/assets/features-DSEovFpp.js">
+    <link rel="modulepreload" crossorigin href="/israel-sites/assets/pieces-J1kvjdEk.js">
+    <link rel="modulepreload" crossorigin href="/israel-sites/assets/network-B9ZVPw8S.js">
+    <link rel="stylesheet" crossorigin href="/israel-sites/assets/features-BGed7SyQ.css">
+  </head>
+  <body>
+    
+    <header class="site-header">
+      <div class="wrap header-inner">
+        <a class="brand" href="./">
+          <span class="brand-mark" aria-hidden="true"></span>
+          מה קורה בישראל?
+        </a>
+        <nav class="areas" aria-label="אזורי האתר">
+          <a class="area active" data-feature="avi" href="./journey.html">אבי</a>
+          <a class="area" href="./metrics.html">מדדים</a>
+          <a class="area" data-feature="knesset" href="./knesset.html">כנסת</a>
+          <a class="area" data-feature="archive" href="./archive.html">ארכיון</a>
+          <span class="area soon" title="בקרוב">הצעות</span>
+          <span class="area soon" title="בקרוב">שיח</span>
+        </nav>
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="החלפת מצב תצוגה">◐</button>
+      </div>
+    </header>
+
+    <main class="map-page">
+      <div class="map-bar">
+        <nav class="map-jump" id="map-jump" aria-label="בחירת מפה"></nav>
+        <div class="map-tools" id="map-tools">
+          <button type="button" class="chip" id="map-prev">→ הקודם</button>
+          <button type="button" class="chip" id="map-next">הבא ←</button>
+          <button type="button" class="chip" id="map-zoom-in" aria-label="התקרבות">+</button>
+          <button type="button" class="chip" id="map-zoom-out" aria-label="התרחקות">−</button>
+          <button type="button" class="chip" id="map-fit">הנושא כולו</button>
+        </div>
+      </div>
+      <div class="map-overview" id="map-overview" hidden></div>
+      <div class="map-viewport" id="map-viewport" tabindex="0" aria-label="מפת הטיעונים. אפשר לגרור, להתקרב ולבחור טיעון.">
+        <div class="map-world" id="map-world"></div>
+      </div>
+      <aside class="map-panel" id="map-panel" hidden>
+        <button type="button" class="detail-close" id="map-panel-close" aria-label="סגירה">✕</button>
+        <div id="map-panel-body"></div>
+      </aside>
+    </main>
+
+  </body>
+</html>
